@@ -4,10 +4,8 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -65,6 +63,7 @@ public class DisplayNineImgActivity extends AppCompatActivity implements ViewPag
         public Object instantiateItem(ViewGroup container, int position) {
             PImageView imageView = new PImageView(DisplayNineImgActivity.this);
             imageView.setBigModel();
+            imageView.setLoadProgress();
             imageView.display(list.get(position));
             container.addView(imageView);
             return imageView;

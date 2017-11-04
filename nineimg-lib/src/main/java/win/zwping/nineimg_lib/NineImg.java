@@ -61,6 +61,7 @@ public class NineImg extends RelativeLayout {
     private Adapter adapter;
     private ArrayList<String> data;
     private float width;
+    private int loadingImg, errorImg;
 //    public static ImageLoaderInterface imageLoader;
 
     /**
@@ -205,6 +206,12 @@ public class NineImg extends RelativeLayout {
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.nine_img_img);
+            if (0 != loadingImg) {
+                imageView.setLoadingImg(loadingImg);
+            }
+            if (0 != errorImg) {
+                imageView.setErrorImg(errorImg);
+            }
         }
     }
     //</editor-fold>
