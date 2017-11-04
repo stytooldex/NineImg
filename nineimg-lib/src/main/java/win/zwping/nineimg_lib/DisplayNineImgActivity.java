@@ -65,7 +65,7 @@ public class DisplayNineImgActivity extends AppCompatActivity implements ViewPag
         public Object instantiateItem(ViewGroup container, int position) {
             PImageView imageView = new PImageView(DisplayNineImgActivity.this);
             imageView.setBigModel();
-            imageView.displayImage(list.get(position));
+            imageView.display(list.get(position));
             container.addView(imageView);
             return imageView;
         }

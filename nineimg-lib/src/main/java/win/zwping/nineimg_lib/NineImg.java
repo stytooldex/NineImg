@@ -97,7 +97,7 @@ public class NineImg extends RelativeLayout {
 
     private int getColumn() {
         int size = data.size();
-        return autoSize ? size == 1 ? 1 : size == 2 || size == 4 ? 2 : 3 : 3;
+        return autoSize ? size == 1 ? 1 : 3 : 3;
     }
 
     //</editor-fold>
@@ -155,8 +155,8 @@ public class NineImg extends RelativeLayout {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             if (0 != width) {
-                holder.imageView.getLayoutParams().height = (int) ((width - (((getColumn() - 1) * dividerSize))) / getColumn());
-                holder.imageView.getLayoutParams().width = (int) ((width - (((getColumn() - 1) * dividerSize))) / getColumn());
+                holder.imageView.getLayoutParams().height = (int) ((width - (((getColumn() - 1) * dividerSize))) / (getColumn() == 1 ? 2.1f : 3));
+                holder.imageView.getLayoutParams().width = (int) ((width - (((getColumn() - 1) * dividerSize))) / (getColumn() == 1 ? 2.5f : 3));
                 holder.imageView.setLayoutParams(holder.imageView.getLayoutParams());
             }
             holder.imageView.displayImage(data.get(position));

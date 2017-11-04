@@ -8,9 +8,9 @@
     tools:context="win.zwping.nineimg.MainActivity">
 
     <Button
-        android:background="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
         android:onClick="OnClick" />
     <win.zwping.nineimg_lib.NineImg
         android:id="@+id/nine_img"
